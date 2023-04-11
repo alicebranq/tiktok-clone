@@ -10,7 +10,7 @@ function SideBar() {
 
     const [liked, setLiket] = useState(false)
 
-    function handleLike(){
+    function handleLike({likes, messages, shares}){
         setLiked(!liked)
     }
 
@@ -21,15 +21,15 @@ function SideBar() {
                 onClick={handleLike}
             >
                 {liked ? <FavoriteBorderIcon fontSize='large'/> : <FavoriteIcon  />} 
-                <p> { liked ? 300 + 1 : 300} </p>
+                <p> { liked ? likes + 1 : likes} </p>
             </div>
             <div className='video_sidebar_options'>
                 <ChatIcon fontSize='large'/>
-                <p> Comentários</p>
+                <p> {messages} </p>
             </div>
             <div className='video_sidebar_options'>
                 <ShareIcon fontSize='large'/>
-                <p> Compartilhar </p>
+                <p> {shares} </p>
             </div>
 
         </div>
