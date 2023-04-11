@@ -1,0 +1,54 @@
+.video_footer{
+    position: relative;
+    bottom: 20%;
+    color: white;
+    margin-left: 30px;
+}
+
+    .videofooter_text h3{
+        padding-bottom: 20px;
+    }
+    .videofooter_text p{
+        padding-bottom: 20px;
+    }
+
+.videofooter_music{
+    display: flex;
+}
+
+
+.videofooter_record{
+    animation: spinTheRecord 3s infinite linear;
+    position: absolute;
+    bottom: 5px;
+    right: 15%;
+    height: 50px;
+    filter: invert(1);
+}
+    /* animação de imagem: */
+    @keyframes spinTheRecord{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg)
+        }
+    }
+
+
+.videofooter_music_text{
+    width: 100%;
+    overflow-x: hidden;
+}
+.videofooter_music_text p{
+    animation: MoveMusicText 6s infinite linear;
+}
+    /* animação de texto: */
+    @keyframes MoveMusicText{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
